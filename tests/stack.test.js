@@ -18,6 +18,7 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBe(42);
 });
 
-test('pop on empty stack returns undefined', () => {
-    expect(stack.pop()).toBe(999);
+test('pop returns the last pushed element', () => {
+    stack.push(55);
+    expect(stack.pop()).toBe(55);
 });
