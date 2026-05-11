@@ -12,7 +12,7 @@
   },
   "license": "ISC",
   "author": "Nikola Rajic",
-  "type": "commonjs",
+  
   "main": "src/index.js",
   "directories": {
     "test": "tests"
