@@ -1,5 +1,5 @@
 const { Builder, By, until } = require('selenium-webdriver');
-require('chromedriver');
+require('geckodriver');
 
 const fileUnderTest = 'file://' + __dirname.replaceAll(/ /g, '%20').replaceAll(/\\/g, '/') + '/../dist/index.html';
 const defaultTimeout = 10000;
@@ -8,7 +8,7 @@ jest.setTimeout(1000 * 60 * 5);
 
 beforeAll(async () => {
     console.log(fileUnderTest);
-    driver = await new Builder().forBrowser('chrome').build();
+    driver = await new Builder().forBrowser('firefox').build();
     await driver.get(fileUnderTest);
 });
 
