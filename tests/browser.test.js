@@ -30,3 +30,8 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+test('peek button should have correct text', async () => {
+    let peekButton = await driver.findElement(By.id('peek'));
+    let text = await peekButton.getText();
+    expect(text).toEqual("Fel text"); // medvetet fel
+});
